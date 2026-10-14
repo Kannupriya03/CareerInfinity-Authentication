@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard | CareerInfinity</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="auth-card">
+    <h1>CareerInfinity</h1>
+    <h2>Welcome to your Dashboard!</h2>
+    <p>Logged in as: {{ email }}</p>
+    <p class="success">Authentication Successful!</p>
+
+    <form method="POST" action="{{ url_for('logout') }}">
+      <button type="submit">Logout</button>
+    </form>
+  </div>
+</body>
+</html>
